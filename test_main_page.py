@@ -9,3 +9,9 @@ def test_guest_can_to_login_page(browser):
     time.sleep(2)
     page.go_to_login_page()  # выполняем метод страницы — переходим на страницу логина
     time.sleep(2)
+
+def test_guest_should_see_login_link(browser):
+    link = "http://selenium1py.pythonanywhere.com/"
+    page = MainPage(browser, link)
+    page.open()
+    page.should_be_login_link()
