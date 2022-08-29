@@ -20,7 +20,7 @@ class ProductPage(BasePage):
         product_name = self.browser.find_element(*ProductPageLocators.NAME_OF_PRODUCT).text
         message = self.browser.find_element(*ProductPageLocators.MESSAGE_ABOUT_ADDING).text
 
-        assert product_name in message, "Product name not found on message"
+        assert product_name == message, "Product name not found in message"
 
     def compare_basket_and_product_price(self):
         # Сравнение цен товара и пустой корзины
