@@ -18,3 +18,5 @@ class ProductPageLocators():
 
     MESSAGE_ABOUT_ADDING = (By.CSS_SELECTOR, 'div.alert:nth-child(1) strong')
     BASKET_PRICE = (By.CSS_SELECTOR, '.alertinner p strong')
+
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages div:first-child")
